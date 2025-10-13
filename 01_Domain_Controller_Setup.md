@@ -1,4 +1,4 @@
-# 🧩 Laboratorio Active Directory con Windows Server 2022
+# Laboratorio Active Directory con Windows Server 2022
 
 Configuración paso a paso de un entorno de dominio completo con dos controladores de dominio (DC1 y DC2), servicio DNS, zona inversa y replicación funcional.
 
@@ -27,7 +27,7 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 4. Promocionar el servidor como **Domain Controller principal (DC1)**.
 
 ### Verificación
-```bash
+cmd
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
@@ -75,7 +75,7 @@ Una vez unido, **reiniciar** el servidor para aplicar los cambios.
 ### Comprobación de replicación y roles FSMO
 
 Verificar el estado de la replicación entre controladores de dominio:
-```bash
+cmd
 repadmin /replsummary
 
 
