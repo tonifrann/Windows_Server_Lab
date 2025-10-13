@@ -52,12 +52,12 @@ Configuración del segundo controlador de dominio para asegurar la redundancia, 
 
 
 ### Unión al dominio existente
-Unir el servidor al dominio **empresa.local**:
+Unir el servidor al dominio empresa.local:
 1. Cambiar el nombre del equipo a `DC2`.
 2. En Propiedades del sistema → Nombre de equipo → Dominio, ingresar `empresa.local`.
 3. Usar credenciales de administrador del dominio (por ejemplo: `Administrador@empresa.local`).
 
-Una vez unido, **reiniciar** el servidor para aplicar los cambios.
+Una vez unido, reiniciar el servidor para aplicar los cambios.
 
 
 ### Promoción como Domain Controller adicional
@@ -65,9 +65,9 @@ Una vez unido, **reiniciar** el servidor para aplicar los cambios.
 2. Seleccionar Agregar un controlador de dominio a un dominio existente.  
 3. Confirmar el dominio `empresa.local`.  
 4. Habilitar las opciones:  
-   - **Servidor DNS**  
-   - **Catálogo global (Global Catalog)**  
-5. Completar el asistente para promover `DC2` como segundo **Domain Controller**.
+   - Servidor DNS* 
+   - Catálogo global (Global Catalog)  
+5. Completar el asistente para promover `DC2` como segundo Domain Controller.
 
 
 ### Comprobación de replicación y roles FSMO
