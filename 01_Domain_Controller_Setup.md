@@ -27,13 +27,13 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 4. Promocionar el servidor como **Domain Controller principal (DC1)**.
 
 ### Verificación
-cmd
+**cmd**
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
 
 
-## 🧩 2. Creación del segundo Domain Controller (DC2)
+## 2. Creación del segundo Domain Controller (DC2)
 
 Configuración del segundo controlador de dominio para asegurar la **redundancia**, **alta disponibilidad** y **replicación automática** del directorio activo.
 
@@ -75,7 +75,7 @@ Una vez unido, **reiniciar** el servidor para aplicar los cambios.
 ### Comprobación de replicación y roles FSMO
 
 Verificar el estado de la replicación entre controladores de dominio:
-cmd
+**cmd**
 repadmin /replsummary
 
 
