@@ -33,12 +33,12 @@ repadmin /replsummary
 
 Resultado sin errores (replicación OK).
 
+---
 
 ## 2. Creación del segundo Domain Controller (DC2)
 
 Configuración del segundo controlador de dominio para asegurar la **redundancia**, **alta disponibilidad** y **replicación automática** del directorio activo.
 
----
 
 ### Configuración de la máquina virtual
 **Hyper-V → Nueva VM:**
@@ -50,7 +50,6 @@ Configuración del segundo controlador de dominio para asegurar la **redundancia
 - **DNS secundario:** 127.0.0.1  
 - **Hostname:** `DC2`
 
----
 
 ### Unión al dominio existente
 Unir el servidor al dominio **empresa.local**:
@@ -60,7 +59,6 @@ Unir el servidor al dominio **empresa.local**:
 
 Una vez unido, **reiniciar** el servidor para aplicar los cambios.
 
----
 
 ### Promoción como Domain Controller adicional
 1. Instalar el rol **Active Directory Domain Services (AD DS)** desde el **Server Manager**.  
@@ -71,7 +69,6 @@ Una vez unido, **reiniciar** el servidor para aplicar los cambios.
    - **Catálogo global (Global Catalog)**  
 5. Completar el asistente para promover `DC2` como segundo **Domain Controller**.
 
----
 
 ### Comprobación de replicación y roles FSMO
 
