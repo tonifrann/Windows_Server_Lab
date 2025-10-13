@@ -21,13 +21,13 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
   - **Hostname:** `DC1`
 
 ### Instalación del rol Active Directory Domain Services
-1. Instalar el rol **Active Directory Domain Services (AD DS)**.  
-2. Crear un **nuevo bosque**: `empresa.local`.  
-3. Incluir los roles de **DNS** y **Catálogo global (Global Catalog)**.  
-4. Promocionar el servidor como **Domain Controller principal (DC1)**.
+1. Instalar el rol Active Directory Domain Services (AD DS).  
+2. Crear un nuevo bosque: `empresa.local`.  
+3. Incluir los roles de DNS y Catálogo global (Global Catalog).  
+4. Promocionar el servidor como Domain Controller principal (DC1).
 
 ### Verificación
-**cmd**
+### cmd
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
