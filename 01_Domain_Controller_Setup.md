@@ -1,37 +1,28 @@
-##1.- Creación del primer Domain Controller (DC1)##
+### 🏗️ 1. Creación del primer Domain Controller (DC1)
 
-Configuración de la VM
+### ⚙️ Configuración de la VM
 
-Hyper-V → nueva máquina virtual:
+**Hyper-V → Nueva máquina virtual:**
+- **RAM:** 4096 MB  
+- **Disco:** 127 GB (dinámico)  
+- **Conmutador de red:** Privado (sin acceso a Internet)
 
-RAM: 2048 MB
+### 💽 Instalación de Windows Server 2022
 
-Disco: 127 GB (dinámico)
+**Configuración de red:**
+- **IPv4:** `172.16.0.100`  
+- **DNS:** `172.16.0.100`  
+- **IPv6:** Desactivado  
+- **Hostname:** `DC1`
 
-Conmutador de red: Privado (sin acceso a Internet)
+### 🧩 Instalación del rol Active Directory Domain Services
+- Crear **nuevo bosque:** `empresa.local`  
+- Añadir roles de **DNS** y **Global Catalog**  
+- Promocionar el servidor a **Domain Controller**
 
-Instalación de Windows Server 2022
-
-Configuración de red:
-
-IPv4: 172.16.0.100
-DNS: 172.16.0.100
-IPv6: Desactivado
-Hostname: DC1
-
-
-Instalación del rol Active Directory Domain Services
-
-Nuevo bosque: empresa.local
-
-Añadir roles de DNS y Global Catalog
-
-Promocionar el servidor a Domain Controller
-
-Comprobación de replicación
-
+### ✅ Comprobación de replicación
+```bash
 repadmin /replsummary
-
 Resultado sin errores (replicación OK).
 
 
