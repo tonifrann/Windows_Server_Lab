@@ -1,4 +1,4 @@
-1.- Creación del primer Domain Controller (DC1)
+##1.- Creación del primer Domain Controller (DC1)##
 
 Configuración de la VM
 
@@ -35,7 +35,7 @@ repadmin /replsummary
 Resultado sin errores (replicación OK).
 
 
-2️.- Creación del segundo Domain Controller (DC2)
+##2️.- Creación del segundo Domain Controller (DC2)##
 
 Configuración similar a DC1, con IP 172.16.0.101
 
@@ -53,7 +53,7 @@ netdom query fsmo
 Ambos DC replican correctamente.
 
 
-3.- Configuración DNS y Zona Inversa
+##3.- Configuración DNS y Zona Inversa##
 
 En DC1 → añadir 8.8.8.8 como Forwarder
 
@@ -64,3 +64,5 @@ Añadir manualmente los punteros PTR de DC1 y DC2
 Verificar resolución con:
 
 nslookup 172.16.0.100
+
+
