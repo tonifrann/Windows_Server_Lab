@@ -27,7 +27,7 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 4. Promocionar el servidor como Domain Controller principal (DC1).
 
 ### Verificación
-cmd
+''cmd
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
