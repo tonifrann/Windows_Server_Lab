@@ -1,151 +1,61 @@
-Laboratorio Windows Server 2022 – Prácticas y Configuración
+# Windows Server 2022 Enterprise Lab Environment
 
-Este repositorio documenta prácticas completas de laboratorio en Windows Server 2022, incluyendo Active Directory, DHCP, GPOs, backup, SAN, failover clustering, VPN, certificados, monitorización y Azure (Entra ID). También incluye un escenario de migración a Windows Server 2025.
+## Objetivo
+Este laboratorio reproduce la infraestructura IT básica de una empresa mediana con Active Directory, DNS, DHCP, GPOs, File Server, WSUS, CA, DFS y replicación entre dos controladores de dominio.
 
-El objetivo es tener soltura en la práctica, simulando un entorno empresarial, y que sirva como ejemplo para curriculum/GitHub.
+Diseñado y documentado por **Antonio de Francisco**.
 
-📌 Contenido del laboratorio
+---
 
-Active Directory
+## Infraestructura
 
-Dos Controladores de Dominio replicados.
+| Rol | Servidor | IP | Sistema | Descripción |
+|------|-----------|---------|--------------|-------------|
+| DC1 | `172.16.0.100` | Windows Server 2022 | Controlador de dominio principal + DHCP + CA Root |
+| DC2 | `172.16.0.101` | Windows Server 2022 | Controlador de dominio secundario + DHCP Failvover + DFS|
+| DFS | `172.16.0.102` | Windows Server 2022 | File Server + Print Server + WSUS + Backup + DFS|
+| W11 | DHCP | Windows 11 | Cliente unido al dominio |
 
-Estructura de OU y usuarios/grupos de prueba.
+---
 
-GPOs: autoenrollment, seguridad, scripts, redirección de carpetas.
+## Componentes del laboratorio
+1. **Active Directory + DNS + DHCP Failover**
+2. **Organizational Units + Delegación de permisos + GPOs**
+3. **File Server con cuotas y deduplicación**
+4. **DFS Namespaces y replicación**
+5. **Servidor de Impresión**
+6. **CA (Cert Authority) + PowerShell Script Signing**
+7. **WSUS y actualizaciones automáticas**
+8. **Backup diario hacia almacenamiento remoto**
+9. **Migración controladores de dominio a Windows Server 2025**
 
-Cliente Windows 11 para validar GPOs y DHCP.
+---
 
-DHCP y DNS
+## Documentación completa
+Cada módulo está documentado en carpetas separadas con pasos técnicos, comandos PowerShell y comprobaciones de validación:
 
-Servidor DHCP configurado, con reservas y exclusiones.
+- [01. Domain Controller Setup](./01_Domain_Controller_Setup/domain_controller_setup.md)
+- [02. Network & DHCP](./02_Network_and_DHCP/dhcp_dns_config.md)
+- [03. OU & GPO Management](./03_OUs_and_GPOs/gpo_configuration.md)
+- [04. File Services & DFS](./04_File_Services/file_server_dfs.md)
+- [05. Print Server](./05_Print_Server/print_server.md)
+- [06. Security & CA](./06_Security_and_CA/certificates_and_powershell_signing.md)
+- [07. Backup & WSUS](./07_Backup_and_WSUS/backup_and_wsus.md)
+- [08. Migration to Windows Server 2025](./08_Migration_to_Server2025/migration_steps.md)
 
-Cliente prueba recibe IP correctamente.
+---
 
-DNS integrado con AD.
+## Ejemplo visual
 
-Servidor de archivos
+![AD Topology](./screenshots/ad_topology.png)
 
-Carpetas compartidas con permisos NTFS.
+---
 
-Deduplicación activada en carpetas grandes.
+## Próximos pasos
+- Integrar **Linux Samba Server** en el dominio.
+- Automatizar backups con PowerShell.
+- Añadir **monitorización básica con Nagios o Zabbix**.
 
-Backup y restauración con Windows Server Backup.
+---
 
-Cliente Windows 11 prueba acceso y permisos.
-
-Backup y Disaster Recovery
-
-Windows Server Backup configurado para:
-
-Volúmenes completos.
-
-Estado del sistema.
-
-Hyper-V.
-
-Restauración de archivos individuales y máquinas virtuales.
-
-Práctica de Azure Backup para copia externa.
-
-WSUS
-
-Servidor WSUS para centralizar actualizaciones.
-
-Grupos de equipos: TEST y PRODUCCIÓN.
-
-GPO para apuntar clientes al servidor WSUS.
-
-Sincronización, aprobación y despliegue de actualizaciones.
-
-VPN / Remote Access
-
-Servidor VPN configurado (SSTP/IKEv2 recomendado).
-
-Autenticación MS-CHAPv2 y EAP.
-
-Firewall configurado para tráfico VPN.
-
-Cliente Windows 11 se conecta y valida acceso a recursos.
-
-SAN e iSCSI / Failover Clustering
-
-iSCSI Target Server y discos virtuales configurados.
-
-Nodos conectados como iSCSI Initiators.
-
-Failover Cluster con:
-
-File Server role.
-
-Configuración de Quorum (Node Majority / Node+Disk / Dynamic Witness).
-
-Failover y failback configurados.
-
-Alta disponibilidad y redundancia probadas.
-
-Active Directory Certificate Services (AD CS)
-
-PKI interna: Root y Subordinate CA.
-
-Emisión de certificados de usuario y servidor.
-
-Autoenrollment vía GPO.
-
-Firma de scripts PowerShell y revocación de certificados.
-
-Performance Monitoring
-
-Task Manager, Resource Monitor para supervisión rápida.
-
-Performance Monitor con Data Collector Sets.
-
-Reliability Monitor para índice de estabilidad.
-
-Event Viewer con logs de sistema, aplicación y seguridad.
-
-Buenas prácticas: línea base, automatización y centralización de logs.
-
-Azure / Microsoft Entra ID
-
-Tenant configurado y usuarios/grupos creados.
-
-Sincronización con AD local via Entra Connect.
-
-Storage Account y File Share con script de conexión.
-
-Máquina virtual en Azure y prueba de RDP/SSH.
-
-Resource Groups para gestión de permisos y costes.
-
-Migración Windows Server 2022 → 2025
-
-Preparación: backup y compatibilidad de roles.
-
-Instalación de Windows Server 2025 en nuevas VMs.
-
-Promoción de DC adicional y replicación de AD/DNS/DHCP.
-
-Transferencia de roles FSMO.
-
-Migración de servidor de archivos y deduplicación.
-
-Importación/exportación de DHCP.
-
-Validación de clientes y GPOs.
-
-Buenas prácticas: snapshots, documentación y monitorización post-migración.
-
-🛠️ Scripts y comandos de ejemplo
-Export/Import DHCP
-# Exportar DHCP 2022
-Export-DhcpServer -ComputerName DC1-2022 -File C:\backup\dhcpconfig.xml -Leases
-
-# Importar DHCP 2025
-Import-DhcpServer -ComputerName DC1-2025 -File C:\backup\dhcpconfig.xml -Leases -BackupPath C:\dhcpbackup
-
-Firmar scripts PowerShell con certificado
-Set-AuthenticodeSignature .\script.ps1 -Certificate (Get-Item Cert:\CurrentUser\My\<Thumbprint>)
-
-Robocopy para migración de archivos
-robocopy \\DC1-2022\Share \\DC1-2025\Share /MIR /COPYALL /SEC /R:3 /W:5
+> **Aprendizaje clave:** Este lab demuestra experiencia práctica en despliegue, replicación y mantenimiento de servicios empresariales en entorno Windows Server. Todo fue configurado y probado manualmente, incluyendo migración a Windows Server 2025.
