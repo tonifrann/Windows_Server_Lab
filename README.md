@@ -34,7 +34,7 @@ Diseñado y documentado por **Antonio de Francisco**.
 ## Documentación completa
 Cada módulo está documentado en carpetas separadas con pasos técnicos, comandos PowerShell y comprobaciones de validación:
 
-- [01. Domain Controller Setup](./01_Domain_Controller_Setup/domain_controller_setup.md)
+- [01. Domain Controller Setup](./01_domain_controller_setup.md)
 - [02. Network & DHCP](./02_Network_and_DHCP/dhcp_dns_config.md)
 - [03. OU & GPO Management](./03_OUs_and_GPOs/gpo_configuration.md)
 - [04. File Services & DFS](./04_File_Services/file_server_dfs.md)
