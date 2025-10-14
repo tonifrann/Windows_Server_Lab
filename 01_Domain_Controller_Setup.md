@@ -148,8 +148,6 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
    - **Modo:** `Load Balance (50/50)`  
 3. Verificar en DC2 que el Scope se haya replicado correctamente.
 
-![Scope DHCP en DC1](../failover.png)
-*Figura 1: Scope DHCP configurado en DC1.*
 ---
 
 ## 5. Prueba de funcionamiento con cliente Windows 11
