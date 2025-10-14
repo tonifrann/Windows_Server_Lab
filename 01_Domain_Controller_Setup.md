@@ -65,7 +65,7 @@ Una vez unido, reiniciar el servidor para aplicar los cambios.
 2. Seleccionar Agregar un controlador de dominio a un dominio existente.  
 3. Confirmar el dominio `empresa.local`.  
 4. Habilitar las opciones:  
-   - Servidor DNS* 
+   - Servidor DNS
    - Catálogo global (Global Catalog)  
 5. Completar el asistente para promover `DC2` como segundo Domain Controller.
 
