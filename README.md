@@ -34,12 +34,13 @@ Diseñado y documentado por **Antonio de Francisco**.
 Cada módulo está documentado en carpetas separadas con pasos técnicos, comandos PowerShell y comprobaciones de validación:
 
 - [01. Domain Controller Setup & DNS & DHCP Failover](./01_Domain_Controller_Setup.md)
-- [02. OU & GPO Management](./gpo_configuration.md)
-- [03. File Services & DFS](./file_server_dfs.md)
-- [04. Print Server](./print_server.md)
-- [05. Security & CA](./certificates_and_powershell_signing.md)
-- [07. Backup & WSUS](./backup_and_wsus.md)
-- [08. Migration to Windows Server 2025](./migration_steps.md)
+- [02. OU & GPO Management](./docs/02_Ou_gpo.md)
+- [03. File Services & DFS](./docs/03_File_Server_DFS.md)
+- [04. Print Server](./docs/04_Print_Server.md)
+- [05. Security & CA](./docs/05_CA.md)
+- [06. WSUS](./docs/06_WSUS.md)
+- [07. Backup] (./docs/07_Backup.md)
+- [08. Migration to Windows Server 2025](./docs/08_Migration.md)
 
 ---
 

@@ -15,8 +15,8 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 ### Instalación del sistema operativo
 - **SO:** Windows Server 2022  
 - **Configuración de red:**
-  - **IPv4:** 172.16.0.100  
-  - **DNS:** 172.16.0.100  
+  - **IPv4:** 172.0.16.100  
+  - **DNS:** 172.0.16.100  
   - **IPv6:** Desactivado  
   - **Hostname:** `DC1`
 
@@ -45,8 +45,8 @@ Configuración del segundo controlador de dominio para asegurar la redundancia, 
 - **RAM:** 4096 MB  
 - **Disco:** 127 GB (dinámico)  
 - **Conmutador de red:** Privado (sin acceso a Internet)  
-- **IPv4:** 172.16.0.101  
-- **DNS primario:** 172.16.0.100  
+- **IPv4:** 172.0.16.101  
+- **DNS primario:** 172.0.16.100  
 - **DNS secundario:** 127.0.0.1  
 - **Hostname:** `DC2`
 
@@ -101,28 +101,28 @@ En DC1 → DNS Manager → Propiedades del servidor → Forwarders:
 ### Creación de la Zona Inversa
 1. En DC1 → DNS Manager → Zonas de búsqueda inversa → Nueva zona  
    - Tipo: Zona principal  
-   - Red: `172.16.0.x`  
+   - Red: `172.0.16.x`  
    - Almacenada en Active Directory y replicada a todos los DC del dominio.
 
 2. Una vez creada la zona inversa, se comprobó la resolución inversa:
  
    **cmd**
    
-   nslookup 172.16.0.100
+   nslookup 172.0.16.100
 
 Inicialmente el comando no reconocía el host, por lo que se procedió a añadir manualmente los registros PTR.
 
 ### Creación manual de registros PTR
 
-En la zona inversa 172.16.0.x, se añadieron dos nuevos punteros:
+En la zona inversa 172.0.16.x, se añadieron dos nuevos punteros:
 
-172.16.0.100 → DC1.empresa.local
+172.0.16.100 → DC1.empresa.local
 
-172.16.0.101 → DC2.empresa.local
+172.0.16.101 → DC2.empresa.local
 
 **cmd**
 
-nslookup 172.16.0.100
+nslookup 172.0.16.100
 
 
 Con esta configuración, el DNS queda completamente integrado en el entorno de Active Directory.
@@ -135,8 +135,8 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
 2. Autorizar el servidor DHCP.  
 3. Crear un Scope IPv4 con los siguientes parámetros:
 
-   - **Rango:** `172.16.0.2 – 172.16.0.199`  
-   - **Exclusiones:** `172.16.0.100 – 172.16.0.110` *(IPs reservadas para servidores)*  
+   - **Rango:** `172.0.16.2 – 172.0.16.199`  
+   - **Exclusiones:** `172.0.16.100 – 172.0.16.110` *(IPs reservadas para servidores)*  
    - **Duración de concesión:** `8 días`
 
 ---
