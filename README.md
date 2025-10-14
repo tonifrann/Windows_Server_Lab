@@ -45,7 +45,7 @@ Cada módulo está documentado en carpetas separadas con pasos técnicos, comand
 
 ## Ejemplo visual
 
-![AD Topology](./screenshots/ad_topology.png)
+![AD Topology]((https://github.com/tonifrann/Windows_Server_Lab/blob/main/images/DHCP_Failover.png))
 
 ---
 
