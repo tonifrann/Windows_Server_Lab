@@ -127,3 +127,38 @@ nslookup 172.16.0.100
 
 Con esta configuración, el DNS queda completamente integrado en el entorno de Active Directory.
 
+## 4. Configuración de DHCP
+
+### Instalación y configuración en DC1
+
+1. Instalar el rol DHCP Server.  
+2. Autorizar el servidor DHCP.  
+3. Crear un Scope IPv4 con los siguientes parámetros:
+
+   - **Rango:** `172.16.0.2 – 172.16.0.199`  
+   - **Exclusiones:** `172.16.0.100 – 172.16.0.110` *(IPs reservadas para servidores)*  
+   - **Duración de concesión:** `8 días`
+
+---
+
+### Configuración de tolerancia a fallos
+
+1. Instalar el rol DHCP también en DC2 (sin configurarlo inicialmente).  
+2. Desde **DC1**, configurar el DHCP Failover con DC2:  
+   - **Modo:** `Load Balance (50/50)`  
+3. Verificar en DC2 que el Scope se haya replicado correctamente.
+
+---
+
+## 5. Prueba de funcionamiento con cliente Windows 11
+
+1. Crear una nueva VM llamada W11 con Windows 11.  
+2. Configurar la red en modo DHCP.  
+3. Verificar la asignación de red ejecutando:
+
+   ```powershell
+   ipconfig /all
+
+
+
+
