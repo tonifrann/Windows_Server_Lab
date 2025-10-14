@@ -21,27 +21,25 @@ Diseñado y documentado por **Antonio de Francisco**.
 ## Componentes del laboratorio
 1. **Active Directory + DNS + DHCP Failover**
 2. **Organizational Units + Delegación de permisos + GPOs**
-3. **File Server con cuotas y deduplicación**
-4. **DFS Namespaces y replicación**
-5. **Servidor de Impresión**
-6. **CA (Cert Authority) + PowerShell Script Signing**
-7. **WSUS y actualizaciones automáticas**
-8. **Backup diario hacia almacenamiento remoto**
-9. **Migración controladores de dominio a Windows Server 2025**
+3. **File Server con cuotas y deduplicación + DFS Namespaces y replicación**
+4. **Servidor de Impresión**
+5. **CA (Cert Authority) + PowerShell Script Signing**
+6. **WSUS y actualizaciones automáticas**
+7. **Backup diario hacia almacenamiento remoto**
+8. **Migración controladores de dominio a Windows Server 2025**
 
 ---
 
 ## Documentación completa
 Cada módulo está documentado en carpetas separadas con pasos técnicos, comandos PowerShell y comprobaciones de validación:
 
-- [01. Domain Controller Setup](./01_Domain_Controller_Setup.md)
-- [02. Network & DHCP](./02_Network_and_DHCP/dhcp_dns_config.md)
-- [03. OU & GPO Management](./03_OUs_and_GPOs/gpo_configuration.md)
-- [04. File Services & DFS](./04_File_Services/file_server_dfs.md)
-- [05. Print Server](./05_Print_Server/print_server.md)
-- [06. Security & CA](./06_Security_and_CA/certificates_and_powershell_signing.md)
-- [07. Backup & WSUS](./07_Backup_and_WSUS/backup_and_wsus.md)
-- [08. Migration to Windows Server 2025](./08_Migration_to_Server2025/migration_steps.md)
+- [01. Domain Controller Setup & DNS & DHCP Failover](./01_Domain_Controller_Setup.md)
+- [02. OU & GPO Management](./gpo_configuration.md)
+- [03. File Services & DFS](./file_server_dfs.md)
+- [04. Print Server](./print_server.md)
+- [05. Security & CA](./certificates_and_powershell_signing.md)
+- [07. Backup & WSUS](./backup_and_wsus.md)
+- [08. Migration to Windows Server 2025](./migration_steps.md)
 
 ---
 
