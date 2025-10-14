@@ -33,7 +33,7 @@ Diseñado y documentado por **Antonio de Francisco**.
 ## Documentación completa
 Cada módulo está documentado en carpetas separadas con pasos técnicos, comandos PowerShell y comprobaciones de validación:
 
-- [01. Domain Controller Setup & DNS & DHCP Failover](./01_Domain_Controller_Setup.md)
+- [01. Domain Controller Setup & DNS & DHCP Failover](./docs/01_Domain_Controller_Setup.md)
 - [02. OU & GPO Management](./docs/02_Ou_gpo.md)
 - [03. File Services & DFS](./docs/03_File_Server_DFS.md)
 - [04. Print Server](./docs/04_Print_Server.md)
