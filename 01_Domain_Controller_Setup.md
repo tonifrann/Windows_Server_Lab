@@ -105,7 +105,7 @@ En DC1 → DNS Manager → Propiedades del servidor → Forwarders:
    - Almacenada en Active Directory y replicada a todos los DC del dominio.
 
 2. Una vez creada la zona inversa, se comprobó la resolución inversa:
-3. 
+ 
    **cmd**
    
    nslookup 172.16.0.100
