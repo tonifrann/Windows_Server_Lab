@@ -27,8 +27,7 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 4. Promocionar el servidor como Domain Controller principal (DC1).
 
 ### Verificación
-cmd
-
+**cmd**
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
@@ -105,8 +104,7 @@ En DC1 → DNS Manager → Propiedades del servidor → Forwarders:
    - Almacenada en Active Directory y replicada a todos los DC del dominio.
 
 2. Una vez creada la zona inversa, se comprobó la resolución inversa:
-   cmd
-   
+   **cmd**
    nslookup 172.16.0.100
 
 Inicialmente el comando no reconocía el host, por lo que se procedió a añadir manualmente los registros PTR.
