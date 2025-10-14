@@ -28,6 +28,7 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 
 ### Verificación
 **cmd**
+
 repadmin /replsummary
 
 Resultado sin errores (replicación OK).
@@ -73,7 +74,7 @@ Una vez unido, reiniciar el servidor para aplicar los cambios.
 
 Verificar el estado de la replicación entre controladores de dominio:
 
-cmd
+**cmd**
 
 repadmin /replsummary
 
@@ -104,7 +105,9 @@ En DC1 → DNS Manager → Propiedades del servidor → Forwarders:
    - Almacenada en Active Directory y replicada a todos los DC del dominio.
 
 2. Una vez creada la zona inversa, se comprobó la resolución inversa:
+3. 
    **cmd**
+   
    nslookup 172.16.0.100
 
 Inicialmente el comando no reconocía el host, por lo que se procedió a añadir manualmente los registros PTR.
@@ -117,7 +120,7 @@ En la zona inversa 172.16.0.x, se añadieron dos nuevos punteros:
 
 172.16.0.101 → DC2.empresa.local
 
-cmd
+**cmd**
 
 nslookup 172.16.0.100
 
