@@ -19,7 +19,7 @@ Configuración de discos, File Server, quotas y DFS (Distributed File System) en
 2. Crear un **nuevo disco virtual** en modo `Mirror`.  
 3. Configurar **deduplicación** en el disco virtual.
 
-[Ver captura Mirror](./images/mirror.png)
+[Ver captura Mirror](../images/mirror.png)
 
 ### Configuración de carpetas y permisos
 - Crear la carpeta `ventas` en el disco virtual.  
@@ -60,7 +60,7 @@ Configuración de DFS Namespaces y DFS Replication para sincronización de carpe
 3. Configurar permisos de **escritura** en `C:\DFSroots\Folder` de cada servidor para el grupo `GG_ventas`.  
 4. Verificar que el usuario **Marc** pueda crear archivos desde Windows 11.
 
-[Ver captura Namespace DFS](./images/dfs_name.png)
+[Ver captura Namespace DFS](../images/dfs_name.png)
 
 ---
 
@@ -71,7 +71,7 @@ Configuración de DFS Namespaces y DFS Replication para sincronización de carpe
 3. Seleccionar la carpeta `E:\ventas` de `DC2` como origen y configurar DFS para replicarla en la misma ubicación en `DFS`.  
 4. Desde Windows 11, crear un documento en `\\DC2.empresa.local\ventas` y verificar que se replique correctamente en `E:\ventas` del servidor `DFS`.
 
-[Ver captura Replication DFS](./images/dfs_rep.png)
+[Ver captura Replication DFS](../images/dfs_rep.png)
 
 
 
