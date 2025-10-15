@@ -26,6 +26,8 @@ Configuración de discos, File Server, quotas y DFS (Distributed File System) en
 - Asignar permisos de **modificación** al grupo `GG_ventas`.  
 - Configurar una **cuota** de 5 GB para la carpeta desde **File Server Resource Manager**.
 
+[Ver captura Cuota de la carpeta Ventas](../images/quota.png)
+
 ### Verificación desde PowerShell
 **powershell**
 Get-Disk
