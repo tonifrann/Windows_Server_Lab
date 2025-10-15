@@ -27,7 +27,7 @@ Configuración de discos, File Server, quotas y DFS (Distributed File System) en
 - Configurar una **cuota** de 5 GB para la carpeta desde **File Server Resource Manager**.
 
 ### Verificación desde PowerShell
-```powershell
+**powershell**
 Get-Disk
 Get-StoragePool
 Get-DedupStatus
