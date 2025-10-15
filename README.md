@@ -46,9 +46,7 @@ Cada módulo está documentado en carpetas separadas con pasos técnicos, comand
 
 ## Ejemplo visual
 
-![AD Topology]
-
-Ver captura DHCP Failover](https://github.com/tonifrann/Windows_Server_Lab/blob/main/images/DHCP_Failover.png)
+Ver captura AD Topology](./images/ad_topology.png)
 
 ---
 
