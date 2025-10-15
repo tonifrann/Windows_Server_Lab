@@ -11,9 +11,9 @@ Diseñado y documentado por **Antonio de Francisco**.
 
 | Rol | Servidor | IP | Sistema | Descripción |
 |------|-----------|---------|--------------|-------------|
-| DC1 | `172.16.0.100` | Windows Server 2022 | Controlador de dominio principal + DHCP + CA Root |
-| DC2 | `172.16.0.101` | Windows Server 2022 | Controlador de dominio secundario + DHCP Failvover + DFS|
-| DFS | `172.16.0.102` | Windows Server 2022 | File Server + Print Server + WSUS + Backup + DFS|
+| DC1 | `172.0.16.100` | Windows Server 2022 | Controlador de dominio principal + DHCP + CA Root |
+| DC2 | `172.0.16.101` | Windows Server 2022 | Controlador de dominio secundario + DHCP Failvover + DFS|
+| DFS | `172.0.16.102` | Windows Server 2022 | File Server + Print Server + WSUS + Backup + DFS|
 | W11 | DHCP | Windows 11 | Cliente unido al dominio |
 
 ---
@@ -52,7 +52,6 @@ Cada módulo está documentado en carpetas separadas con pasos técnicos, comand
 
 ## Próximos pasos
 - Integrar **Linux Samba Server** en el dominio.
-- Automatizar backups con PowerShell.
 - Añadir **monitorización básica con Nagios o Zabbix**.
 
 ---
