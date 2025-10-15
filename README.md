@@ -39,14 +39,14 @@ Cada módulo está documentado en carpetas separadas con pasos técnicos, comand
 - [04. Print Server](./docs/04_Print_Server.md)
 - [05. Security & CA](./docs/05_CA.md)
 - [06. WSUS](./docs/06_WSUS.md)
-- [07. Backup] (./docs/07_Backup.md)
+- [07. Backup](./docs/07_Backup.md)
 - [08. Migration to Windows Server 2025](./docs/08_Migration.md)
 
 ---
 
 ## Ejemplo visual
 
-Ver captura AD Topology](./images/ad_topology.png)
+[Ver captura AD Topology](./images/ad_topology.png)
 
 ---
 
