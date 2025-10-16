@@ -41,7 +41,8 @@ Desde **DC2**:
 
 Comprobar roles actuales:
 
-**cmd**
+   **cmd**
+
 netdom query fsmo
 
 ## Transferencia de roles FSMO
@@ -58,7 +59,7 @@ netdom query fsmo
 
 #### Schema Master
 1. Registrar snap-in:
-   ```cmd
+   **cmd**
    regsvr32 schmmgmt.dll
 2. Abrir MMC → Add Snap-in → Active Directory Schema
 3. Conectar a DC1-25, abrir Operations Master y transferir el rol
@@ -68,7 +69,8 @@ netdom query fsmo
 	```powershell
 Move-ADDirectoryServerOperationMasterRole -Identity "DC1-25" -OperationMasterRole 0,1,2,3,4
 
-	```cmd
+   **cmd**
+	
 netdom query fsmo
 
 [Ver captura de los roles](../images/netdom2025.png)
