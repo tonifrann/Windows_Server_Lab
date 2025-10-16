@@ -40,7 +40,7 @@ Desde **DC2**:
 ### Transferencia de roles FSMO
 
 Comprobar roles actuales:
-```bash
+```cmd
 netdom query fsmo
 
 ## Transferencia de roles FSMO
@@ -67,7 +67,7 @@ netdom query fsmo
 ```powershell
 Move-ADDirectoryServerOperationMasterRole -Identity "DC1-25" -OperationMasterRole 0,1,2,3,4
 
-```bash
+```cmd
 netdom query fsmo
 
 [Ver captura de los roles](../images/netdom2025.png)
