@@ -24,4 +24,4 @@
 - Configurar para que se realice copia de seguridad de la unidad **E:\\**,  
   que contiene los datos del **File Server**.
   
-[Ver captura de la carpeta donde se han  guardado los backups](../images/carpeta.png)
+[Ver captura de los backups](../images/carpeta.png)
