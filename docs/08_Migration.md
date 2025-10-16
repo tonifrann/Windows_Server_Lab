@@ -40,7 +40,8 @@ Desde **DC2**:
 ### Transferencia de roles FSMO
 
 Comprobar roles actuales:
-```cmd
+
+**cmd**
 netdom query fsmo
 
 ## Transferencia de roles FSMO
