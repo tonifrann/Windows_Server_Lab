@@ -141,7 +141,7 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
    - **Exclusiones:** `172.0.16.100 – 172.0.16.110` *(IPs reservadas para servidores)*  
    - **Duración de concesión:** `8 días`
    
-   [Scope DHCP](../images/inversa.png)
+[Scope DHCP](../images/dhcpaddress.png)
 
 ---
 
