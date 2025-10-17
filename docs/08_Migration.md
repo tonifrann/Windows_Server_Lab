@@ -66,7 +66,7 @@ netdom query fsmo
 
 #### Alternativa PowerShell
 
-	```powershell
+   **powershell**
 Move-ADDirectoryServerOperationMasterRole -Identity "DC1-25" -OperationMasterRole 0,1,2,3,4
 
    **cmd**

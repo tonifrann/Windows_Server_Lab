@@ -12,6 +12,8 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 - **Disco:** 127 GB (dinámico)  
 - **Conmutador de red:** Privado (sin acceso a Internet)
 
+[Configuración en Hyper-V de DC1](../images/dc1.png)
+
 ### Instalación del sistema operativo
 - **SO:** Windows Server 2022  
 - **Configuración de red:**
@@ -25,13 +27,6 @@ Configuración paso a paso de un entorno de dominio completo con dos controlador
 2. Crear un nuevo bosque: `empresa.local`.  
 3. Incluir los roles de DNS y Catálogo global (Global Catalog).  
 4. Promocionar el servidor como Domain Controller principal (DC1).
-
-### Verificación
-**cmd**
-
-repadmin /replsummary
-
-Resultado sin errores (replicación OK).
 
 ---
 
@@ -82,6 +77,9 @@ netdom query fsmo
 
 La replicación entre DC1 y DC2 se ha realizado correctamente y no se han detectado errores.
 
+[Ejecución de repadmin /replsummary](../images/repadmin.png)
+
+[Ejecución de netdom query fsmo](../images/netdom.png)
 
 
 ## 3. Configuración DNS y Zona Inversa
@@ -103,6 +101,8 @@ En DC1 → DNS Manager → Propiedades del servidor → Forwarders:
    - Tipo: Zona principal  
    - Red: `172.0.16.x`  
    - Almacenada en Active Directory y replicada a todos los DC del dominio.
+   
+[Zona Inversa](../images/inversa.png)
 
 2. Una vez creada la zona inversa, se comprobó la resolución inversa:
  
@@ -124,6 +124,8 @@ En la zona inversa 172.0.16.x, se añadieron dos nuevos punteros:
 
 nslookup 172.0.16.100
 
+[nslookup](../images/nslookup.png)
+
 
 Con esta configuración, el DNS queda completamente integrado en el entorno de Active Directory.
 
@@ -138,6 +140,8 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
    - **Rango:** `172.0.16.2 – 172.0.16.199`  
    - **Exclusiones:** `172.0.16.100 – 172.0.16.110` *(IPs reservadas para servidores)*  
    - **Duración de concesión:** `8 días`
+   
+   [Scope DHCP](../images/inversa.png)
 
 ---
 
@@ -148,7 +152,7 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
    - **Modo:** `Load Balance (50/50)`  
 3. Verificar en DC2 que el Scope se haya replicado correctamente.
 
-[Scope DHCP en DC1](../images/DHCP_Failover.png)
+[DHCP Failover](../images/DHCP_Failover.png)
 
 
 ---
@@ -159,9 +163,8 @@ Con esta configuración, el DNS queda completamente integrado en el entorno de A
 2. Configurar la red en modo DHCP.  
 3. Verificar la asignación de red ejecutando:
 
-   ```powershell
-   ipconfig /all
+**cmd**
+   
+ipconfig /all
 
-
-
-
+[Ipconfig /all en W11](../images/ipconfig.png)
