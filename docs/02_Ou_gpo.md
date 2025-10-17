@@ -76,5 +76,6 @@ Configuración de Unidades Organizativas, grupos, políticas de grupo (GPO) y ve
 - Usuarios, grupos y GPO’s replicados correctamente de `DC1` a `DC2`.  
 - Verificación de roles FSMO:
 
-```cmd
+**cmd**
+
 netdom query fsmo

@@ -35,6 +35,7 @@ Configuración de un servidor de impresión y despliegue automático mediante GP
 
 1. En el equipo con Windows 11, ejecutar:  
    **cmd**
+   
    gpupdate /force
 
 2. Iniciar sesión con el usuario Marc

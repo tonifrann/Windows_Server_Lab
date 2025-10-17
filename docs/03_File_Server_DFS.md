@@ -30,6 +30,7 @@ Configuración de discos, File Server, quotas y DFS (Distributed File System) en
 
 ### Verificación desde PowerShell
 **powershell**
+
 Get-Disk
 Get-StoragePool
 Get-DedupStatus

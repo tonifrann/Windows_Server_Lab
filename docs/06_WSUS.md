@@ -41,6 +41,7 @@ Configuración completa de un servidor **WSUS (Windows Server Update Services)**
 
 En el equipo **W11**, ejecutar los siguientes comandos en **CMD**:
 
-```cmd
+**cmd**
+
 gpupdate /force
 gpresult /R
