@@ -4,7 +4,7 @@
 
 Este laboratorio reproduce la infraestructura IT completa de una empresa mediana, incluyendo **Active Directory, DNS, DHCP, GPOs, File Server, WSUS, CA, DFS y replicación entre dos controladores de dominio**.
 
-Diseñado y documentado por **Antonio de Francisco**.
+Diseñado y documentado por **Antonio de Francisco Martín**.
 
 ---
 
