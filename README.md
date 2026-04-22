@@ -10,7 +10,7 @@ Diseñado y documentado por **Antonio de Francisco Martín**.
 
 ## Infraestructura
 
-| Rol | IP | Servidor | Sistema | Descripción |
+| Servidor | IP |  | Sistema | Rol |
 |------|-----------|------|-----------|-------------|
 | **DC1** | 172.0.16.100 | Windows Server 2022 | Controlador de dominio principal + DHCP + CA Root |
 | **DC2** | 172.0.16.101 | Windows Server 2022 | Controlador de dominio secundario + DHCP Failover + DFS |
