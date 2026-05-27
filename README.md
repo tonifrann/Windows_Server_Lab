@@ -53,13 +53,6 @@ Cada módulo se encuentra documentado en carpetas separadas, con pasos técnicos
 
 ---
 
-## Próximos pasos
-
-- Integrar **Linux Samba Server** en el dominio  
-- Añadir **monitorización** con Nagios o Zabbix  
-
----
-
 ## Aprendizaje clave
 
 Este laboratorio demuestra experiencia práctica en:
